@@ -1,0 +1,451 @@
+/* General Settings 
+------------------------------------------------------------- */
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background-color:#e7e7e7;
+    font-family: 'Oswald', sans-serif;
+}
+
+em{
+    font-size:0.8em;
+}
+
+a{
+    text-decoration:none;
+    color: #E7E7E7;
+}
+
+.close{
+    color:#444;
+    border:none;
+    background:none;
+    font-size:1.5em;
+    position:absolute;
+    bottom:1px;
+    right:10px;
+}
+
+.closeMail{
+    color:#E7E7E7;
+}
+.close:hover{
+    transition: 0.5s color;
+    color:#DD0000;
+    cursor:pointer;
+}
+
+.adminFunction{
+    position: absolute;
+    transition: 0.3s;
+    padding: 15px 10px 15px 15px;
+    text-align:left;
+}
+
+.adminFunction:hover{
+    right:0;
+}
+
+.styleText{
+    position:relative;
+    left:15px;
+}
+
+[type=submit], .button{
+    border-radius: 4px;
+    background-color: #444;
+    border: none;
+    color: #E7E7E7;
+    padding: 6px;
+    width: 120px;
+    cursor: pointer;
+}
+
+input[type=submit]{
+    margin-top:5px;
+}
+
+input[type=submit]:hover, .button:hover{
+    background-color: #888;
+}
+
+input[type=input]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+/* Vertical Top Menu 
+-------------------------------------------------------------- */
+.menuBar{
+    display:flex;
+    justify-content: space-between;
+}
+.menuBar ul{
+    list-style: none;
+    display:flex;
+}
+
+.menuBar a{
+    display: block;
+    padding: 0 25px;
+    font-size: 1.2em;
+    line-height: 50px;
+    border-right: 1px solid #888;
+    border-bottom: 1px solid #888;
+    background-color: #444;
+    height: 50px;
+}
+
+.menuBar a:hover {
+  background-color: #E7E7E7;
+  color:#151515;
+  transition: .3s background-color;
+  border:none;
+}
+
+.menuBar img{
+    height:50px;
+}
+
+.header{
+    height:500px;
+    background-color: #151515;
+    width:100%;
+    margin-bottom:20px;
+}
+
+/* Login Form 
+-------------------------------------------------------------- */
+#loginWindow{
+    border:1px solid #151515;
+    width:300px;
+    padding:10px;
+    background:#E7E7E7;
+    position:absolute;
+    top:52px;
+    right:0;
+    display:none;
+}
+
+#loginWindow.special:after{
+    content:"";
+    border-left: solid transparent 12px;
+    border-right: solid transparent 12px;
+    border-bottom: solid black 12px;
+    position:absolute;
+    bottom:101%; right:55px;
+}
+
+#loginWindow input[type=checkbox]{
+    position:relative;
+    top:2px;
+    margin-bottom:12px;
+}
+
+#loginWindow p{
+    line-height: 24px;
+}
+
+#loginWindow .submit span {
+    position: relative;
+    transition: 0.5s;
+}
+
+#loginWindow .submit span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+#loginWindow .submit:hover span {
+    padding-right: 15px;
+}
+
+#loginWindow .submit:hover span:after {
+    opacity: 1;
+    right: 0px;
+}
+
+#loginWindow a{
+    background-color: #444;
+    padding: 5px 10px;
+    margin-bottom:5px;
+    display: inline-block;
+}
+
+#loginWindow a:hover{
+    background:#888;
+}
+
+/* Add Post Button
+--------------------------------------------------------------------- */
+.adminAddPost{
+    padding: 10px 15px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 0 7px #999;
+    margin:20px;
+}
+
+.adminAddPost:hover{
+    background-color: #222;
+}
+
+.adminAddPost:active{
+    background-color: #222;
+    box-shadow: 0 3px #666;
+    position:relative;
+    top:2px;
+}
+
+/* Display Post
+--------------------------------------------------------------------- */
+.stylePost{
+    position:relative;
+    border-left: solid 7px #151515;
+    margin:50px 10%;
+    padding: 15px 20px;
+    background:#D1D1D1;
+    text-align:left;
+    overflow:hidden;
+}
+
+.stylePost h3{
+    font-size:1.5em;
+    margin-bottom:40px;
+}
+
+.stylePost p{
+    margin-bottom:20px;
+}
+
+.editPost{
+    width:80px;
+    right: -60px;
+    top:15px;
+    background:#444;
+    border-radius: 5px 0 0 5px;
+}
+
+.stylePost .com{
+    position:absolute;
+    bottom:15px;
+    right: 10px;
+    color:#151515;
+}
+
+.stylePost .com:visited{
+    color:#777;
+}
+
+.mailWindow{
+    position:relative;
+    left:70px;
+    margin:5px 0 10px 0;
+    display:none;
+    padding:8px 15px;
+    width:175px;
+    background:#444;
+    font-weight:normal;
+}
+
+.mailWindow:hover{
+    background-color: #888;
+}
+
+.nameMail{
+    color:#444;
+}
+
+.nameMail:hover{
+    position:relative;
+    bottom:2px;
+    cursor:pointer;
+}
+
+.readMore{
+    display:inline-block;
+    margin:15px 0;
+    color:#444;
+    font-weight:bold;
+}
+
+.page{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.page a{
+    color:#444;
+    font-size:1.1em;
+    padding:4px 8px;
+    border: 1px solid #444;
+    margin: 0 8px;
+    transition: background-color .3s;
+}
+
+.page a:hover{
+    color:#E7E7E7;
+    background-color: #444;
+}
+
+/* Display Comments
+--------------------------------------------------------------------- */
+.commentList{
+    margin:50px 10%;
+}
+
+.commentList h3{
+    margin-bottom:25px;
+}
+
+.comment{
+    position:relative;
+    border:solid 1px #999;
+    margin:20px;
+    padding:10px;
+    overflow:hidden;
+}
+
+.comment p{
+    margin: 10px 60px 10px 20px;
+}
+
+.report{
+    width:110px;
+    right: -70px;
+    top:0;
+    border:none;
+    color: #E7E7E7;
+    background:#DD0000;
+    border-radius: 0 0 0 5px;
+    cursor:pointer;
+}
+
+.previousPage{
+    position:relative;
+    top:10px;
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.previousPage:hover {
+    background-color: #ddd;
+    color: black;
+    text-decoration: none;
+}
+
+.deleteCom{
+    position:absolute;
+    bottom:33%;
+    right:10px;
+    color:#444;
+    border:none;
+    background:none;
+    font-size:1.5em;
+}
+
+.deleteCom:hover{
+    transition: 0.5s color;
+    color:#DD0000;
+    cursor:pointer;
+}
+
+.addComment{
+    width:auto;
+    margin-top:5px;
+    padding: 10px;
+    font-size:1em;
+}
+
+#formComment{
+    margin:50px 10%;
+    display:none;
+}
+
+.formComComment{
+    display:none;
+    margin:20px 5%;
+}
+
+.answerCom{
+    color:#E7E7E7;
+    border:none;
+    background:#444;
+    padding:10px;
+    cursor:pointer;
+    position:relative;
+    right:10px;
+    top:10px;
+}
+
+.answerCom:hover{
+    background:#999;
+    color:#222;
+}
+
+.comComment{
+    margin:20px 20px 20px 5%;
+    border-left:solid 3px #888;
+    position:relative;
+    border:solid 1px #999;
+    padding:10px;
+    overflow:hidden;
+}
+
+.comComment p{
+    margin: 10px 60px 10px 20px;
+}
+
+/* Add Message
+--------------------------------------------------------------------- */
+.addMessage{
+    margin: 50px 10%;
+}
+
+.formMessage legend{
+    font-weight: bold;
+}
+
+.formMessage fieldset{
+    padding:15px;
+}
+
+.settingsMsg{
+    position:absolute;
+    top:-50px;
+    left:50%;
+    margin-left:-240px;
+    border:solid 1px black;
+    background:#444;
+    color:#E7E7E7;
+    border-radius:4px;
+    text-align:center;
+    padding:8px;
+    animation:settingsMsg 1s forwards;
+
+}
+
+.short{
+    margin-left:-120px;
+}
+
+@keyframes settingsMsg{
+    from { top:-50px; }
+    to { top:20px; }
+}
