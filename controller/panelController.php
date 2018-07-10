@@ -131,9 +131,26 @@ function displayReportedComments(){
 	require('view/adminPanel/commentsReportedView.php');
 }
 
-function mailbox(){
+function mailbox($cPage, $perPage){
 	$db = new Manager;
 	$messageManager = new MessageManager($db);
+	$postManager = new PostsManager($db);
+
+	$nbPost = $postManager->count();
+	$nbPage = ceil($nbPost / $perPage);
+
+	if(isset($_GET['p']) && $_GET['p'] > 0 && $_GET['p'] <= $nbPage){
+		$cPage = $_GET['p'];
+	}
+	else{
+		if(isset($_GET['p']) && $_GET['p'] >= $nbPage){
+			$cPage = $nbPage;
+		}
+		else{
+			$cPage = 1;
+		}
+	}
+	
 	require('view/adminPanel/mailboxView.php');
 }
 

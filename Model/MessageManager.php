@@ -37,10 +37,10 @@ class MessageManager extends Manager {
       }
     }
 
-  	public function getMessagesList(){
+  	public function getMessagesList($cPage, $perPage){
   		$messagesList = [];
 
-  		$req = $this->db->query('SELECT id, topic, message, sender, messageDate, messageRead FROM messages ORDER BY id DESC');
+  		$req = $this->db->query('SELECT id, topic, message, sender, messageDate, messageRead FROM messages ORDER BY id DESC LIMIT '.(($cPage-1)*$perPage).','.$perPage);
 
 
   		while($data = $req->fetch(PDO::FETCH_ASSOC)){

@@ -94,7 +94,12 @@ try {
 	                		displayMessage();
 	                	}
 	                	else{
-	                		mailbox();
+	                		if(isset($_GET['p'])){	            
+								mailbox($_GET['p'],5);
+	                   		}
+	                   		else{
+	                   			mailbox(1,5);
+	                   		}
 	                	}
 	                }
 	                elseif ($_GET['page'] === 'settings') {

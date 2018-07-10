@@ -1,7 +1,4 @@
-<?php ob_start(); 
-$nbPost = $postManager->count();
-$nbPage = ceil($nbPost / $perPage);
-?>
+<?php ob_start(); ?>
 
 <form action="index.php?action=panel&amp;page=posts&amp;function=addpost" method="post">
     <p>
