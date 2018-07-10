@@ -99,6 +99,7 @@ function deleteComPanel(){
 	$postManager = new PostsManager($db);
 	$idCom = $_GET['comId'];
 	$commentManager->deleteComment($idCom);
+	$commentManager->deleteComComment($idCom);
 	echo "<span class=\"settingsMsg short\"><i class=\"fas fa-exclamation-triangle\"></i> Commentaire supprimé.</span>";
 	manageComments();
 }

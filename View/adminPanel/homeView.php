@@ -21,8 +21,8 @@
 		<h4>Dernier Commentaire Publié</h4><br />
 		<?php 	
 		$lastComment = $commentManager->getLastComment();
-		$lastPostComment = $postManager->getPost($lastComment->getIdPost());
 		if(!empty($lastComment)){
+			$lastPostComment = $postManager->getPost($lastComment->getIdPost());
 			echo 	'De: '. $lastComment->getAuthor().'<br/>
 					Billet: '.$lastPostComment->getTitle().'<br/>
 					Contenu:<br/>'.substr($lastComment->getContent(), 0, 250).'<br/>'; 

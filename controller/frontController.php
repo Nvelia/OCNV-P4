@@ -70,6 +70,7 @@ function deleteCom(){
 		$idCom = $_GET['comId'];
 		$idPost = $_GET['id'];
 		$commentManager->deleteComment($idCom);
+		$commentManager->deleteComComment($idCom);
 		echo "<span class=\"settingsMsg short\"><i class=\"fas fa-exclamation-triangle\"></i> Commentaire supprimé.</span>";
 	}
 	else{

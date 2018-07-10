@@ -82,6 +82,10 @@ class CommentsManager extends Manager {
         $this->db->exec('DELETE FROM comments WHERE id ='. $id);
     }
 
+    public function deleteComComment($id){
+        $this->db->exec('DELETE FROM comments WHERE idCom='. $id);
+    }
+
     public function deleteReports($id){
         $req = $this->db->prepare('UPDATE comments SET reports = 0 WHERE id = :id');
         $req->bindValue(':id', $id);
