@@ -140,27 +140,39 @@ function activeLinks(){
 	var url_string = window.location.href;
 	var url = new URL(url_string);
 	var page = url.searchParams.get('page');
-	var menuLinks = document.getElementById('linksMenu').children;
+	var menuLinks = document.getElementsByClassName('linksMenu');
 	switch(page){
-		case home:
-			menuLinks.classList.remove('active');
-			this.classList.add('active');
+		case 'home':
+			[].forEach.call(menuLinks, function(el){
+				el.classList.remove('active');
+			});
+			menuLinks[0].classList.add('active');
 			break;
-		case posts:
-			menuLinks.classList.remove('active');
-			this.classList.add('active');
+		case 'posts':
+			[].forEach.call(menuLinks, function(el){
+				el.classList.remove('active');
+			});
+			menuLinks[1].classList.add('active');
 			break;
-		case comments:
-			menuLinks.classList.remove('active');
-			this.classList.add('active');
+		case 'comments':
+			[].forEach.call(menuLinks, function(el){
+				el.classList.remove('active');
+			});
+			menuLinks[2].classList.add('active');
 			break;
-		case mailbox:
-			menuLinks.classList.remove('active');
-			this.classList.add('active');
+		case 'mailbox':
+			[].forEach.call(menuLinks, function(el){
+				el.classList.remove('active');
+			});
+			menuLinks[3].classList.add('active');
 			break;
-		case settings:
-			menuLinks.classList.remove('active');
-			this.classList.add('active');
+		case 'settings':
+			[].forEach.call(menuLinks, function(el){
+				el.classList.remove('active');
+			});
+			menuLinks[4].classList.add('active');
 			break;
 	}
 }
+
+activeLinks();

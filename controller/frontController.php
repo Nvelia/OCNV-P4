@@ -83,13 +83,13 @@ function reportCom(){
 	$commentManager = new CommentsManager($db);
 	$postManager = new PostsManager($db);
 	$comId = $_GET['comId'];
-	$cookieName = 'reportCom'.$comId;
+	$ocp4cookReportCom = 'reportCom'.$comId;
 
-	if(isset($_COOKIE[$cookieName])){
+	if(isset($_COOKIE[$ocp4cookReportCom])){
 		echo "<span class=\"settingsMsg short\"><i class=\"fas fa-exclamation-triangle\"></i> Vous avez déjà signalé ce commentaire.</span>";
 	}
 	else{
-		setcookie($cookieName, 'exist', time() + (86400 * 30));
+		setcookie($ocp4cookReportCom, 'exist', time() + (86400 * 30));
 		$commentManager->updateReports($_GET['comId']);
 		echo "<span class=\"settingsMsg short\"><i class=\"fas fa-exclamation-triangle\"></i> Commentaire signalé.</span>";
 	}
@@ -122,9 +122,9 @@ function login(){
 	$db = new Manager;
 	$manager = new MembersManager($db);
 
-	if(isset($_COOKIE['nickname']) && isset($_COOKIE['hashedPwd'])){
-		$nick = $_COOKIE['nickname'];
-		$pwd = $_COOKIE['hashedPwd'];
+	if(isset($_COOKIE['ocp4cookNickname']) && isset($_COOKIE['ocp4cookHashedPwd'])){
+		$nick = $_COOKIE['ocp4cookNickname'];
+		$pwd = $_COOKIE['ocp4cookHashedPwd'];
 		$user = $manager->getMember('Jean');
 		$hashedPwd = $user->getPassword();
 		if($pwd === $hashedPwd){
@@ -142,8 +142,8 @@ function login(){
 		    $hashedPwd = $user->getPassword();
 
 		    if(isset($_POST['autolog'])){		    
-		    	setcookie('nickname', $nick, time() + (86400 * 30));
-		    	setcookie('hashedPwd', $hashedPwd, time() + (86400 * 30));
+		    	setcookie('ocp4cookNickname', $nick, time() + (86400 * 30));
+		    	setcookie('ocp4cookHashedPwd', $hashedPwd, time() + (86400 * 30));
 		    }
 		    header('Location: index.php');
 		}
@@ -160,8 +160,8 @@ function login(){
 function logout(){
 	$_SESSION = array();
 	session_destroy();
-	setcookie('nickname', '');
-	setcookie('hashedPwd', '');
+	setcookie('ocp4cookNickname', '');
+	setcookie('ocp4cookHashedPwd', '');
 	header('Location: index.php');
 }
 

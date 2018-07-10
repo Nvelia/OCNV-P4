@@ -26,12 +26,12 @@
         </header>
         <div id="container">
             <nav class="panelMenu">
-                <ul id="linksMenu">
-                    <li><a href="?action=panel&amp;page=home" class="active"><i class="fas fa-user-tie"></i> Accueil</a></li>
-                    <li><a href="?action=panel&amp;page=posts"><i class="fas fa-file"></i> Billets</a></li>
-                    <li><a href="?action=panel&amp;page=comments"><i class="fas fa-comment"></i> Commentaires</a></li>
-                    <li><a href="?action=panel&amp;page=mailbox"><i class="fas fa-envelope"></i> Messagerie (<?= $numberMessage ?>)</a></li>
-                    <li><a href="?action=panel&amp;page=settings"><i class="fas fa-cogs"></i> Préférences</a></li>
+                <ul>
+                    <li><a href="?action=panel&amp;page=home" class="active linksMenu"><i class="fas fa-user-tie"></i> Accueil</a></li>
+                    <li><a href="?action=panel&amp;page=posts" class="linksMenu"><i class="fas fa-file"></i> Billets</a></li>
+                    <li><a href="?action=panel&amp;page=comments" class="linksMenu"><i class="fas fa-comment"></i> Commentaires</a></li>
+                    <li><a href="?action=panel&amp;page=mailbox" class="linksMenu"><i class="fas fa-envelope"></i> Messagerie (<?= $numberMessage ?>)</a></li>
+                    <li><a href="?action=panel&amp;page=settings" class="linksMenu"><i class="fas fa-cogs"></i> Préférences</a></li>
                 </ul>
             </nav>
             <aside id="leftCol"></aside>
