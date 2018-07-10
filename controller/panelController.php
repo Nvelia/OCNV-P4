@@ -120,6 +120,9 @@ function manageComments(){
 	if(isset($_POST['postName'])){
 		$id = $_POST['postName'];
 	}
+	elseif(isset($_GET['postId'])){
+		$id = $_GET['postId'];
+	}
 	require('view/adminPanel/commentsPanelView.php');
 }
 

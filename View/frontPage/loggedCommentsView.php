@@ -37,7 +37,7 @@ $getPost = $postManager->getPost($_GET['id']);
 				</div>'; 
 						
 		$getComComments = $commentManager->getComCommentsList($comment->getId());
-		foreach($getComComments as $comComment){
+		foreach(array_reverse($getComComments) as $comComment){
 			echo '	<div class="comComment">
 						<strong>'.$comComment->getAuthor().'</strong><br/>
 						<em>Le '.$comComment->getCommentDate().'</em>

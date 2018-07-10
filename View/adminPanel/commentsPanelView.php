@@ -36,15 +36,30 @@ if(isset($id)){
 		echo '	<div class="comment">
 				<strong>'.$comment->getAuthor().'</strong><br/><em>Le '.$comment->getCommentDate().'</em>
 				<p>'.$comment->getContent().'</p>';
-				if($comment->getReports() == 1){
-					echo '<button type="button" class="deleteReport" id="'.$comment->getId().'"><i class="fas fa-exclamation-triangle"></i> '.$comment->getReports().' Signalement <i class="fas fa-eraser"></i></button>';
-				}
-				elseif($comment->getReports() >= 1){
-					echo '<button type="button" class="deleteReport" id="'.$comment->getId().'"><i class="fas fa-exclamation-triangle"></i> '.$comment->getReports().' Signalements <i class="fas fa-eraser"></i></button>';
-				}
-				echo '<button type="button" id="'.$comment->getId().'" value="'.$comment->getAuthor().'" class="deleteComPanel"><i class="fas fa-trash-alt"></i> Supprimer</button></div>';
+		if($comment->getReports() == 1){
+			echo '<button type="button" class="deleteReport" id="'.$comment->getId().'"><i class="fas fa-exclamation-triangle"></i> '.$comment->getReports().' Signalement <i class="fas fa-eraser"></i></button>';
+		}
+		elseif($comment->getReports() >= 1){
+			echo '<button type="button" class="deleteReport" id="'.$comment->getId().'"><i class="fas fa-exclamation-triangle"></i> '.$comment->getReports().' Signalements <i class="fas fa-eraser"></i></button>';
+		}
+		echo '<button type="button" id="'.$comment->getId().'" name="'.$comment->getIdPost().'" value="'.$comment->getAuthor().'" class="deleteComPanel"><i class="fas fa-trash-alt"></i> Supprimer</button></div>';
+		
+		$getComComments = $commentManager->getComCommentsList($comment->getId());
+		foreach(array_reverse($getComComments) as $comComment){
+			echo '	<div class="comComment">
+					<strong>'.$comComment->getAuthor().'</strong><br/><em>Le '.$comComment->getCommentDate().'</em>
+					<p>'.$comComment->getContent().'</p>';
+			if($comComment->getReports() == 1){
+				echo '<button type="button" class="deleteReport" id="'.$comComment->getId().'"><i class="fas fa-exclamation-triangle"></i> '.$comComment->getReports().' Signalement <i class="fas fa-eraser"></i></button>';
+			}
+			elseif($comComment->getReports() >= 1){
+				echo '<button type="button" class="deleteReport" id="'.$comComment->getId().'"><i class="fas fa-exclamation-triangle"></i> '.$comComment->getReports().' Signalements <i class="fas fa-eraser"></i></button>';
+			}
+			echo '<button type="button" id="'.$comComment->getId().'" name="'.$comComment->getIdPost().'" value="'.$comComment->getAuthor().'" class="deleteComPanel"><i class="fas fa-trash-alt"></i> Supprimer</button></div>';
+		}
 	}
 }
-?> </div> <?php
+?> 
+</div> <?php
 $pageContent = ob_get_clean();
 require('adminPanelView.php'); ?>

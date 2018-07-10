@@ -45,7 +45,7 @@ class CommentsManager extends Manager {
   	public function getCommentsList($idPost){
   		$commentsList = [];
 
-  		$req = $this->db->query('SELECT id, content, author, commentDate, reports FROM comments WHERE idPost ='. $idPost .' AND idCom = 0 ORDER BY id DESC');
+  		$req = $this->db->query('SELECT id, idPost, content, author, commentDate, reports FROM comments WHERE idPost ='. $idPost .' AND idCom = 0 ORDER BY id DESC');
 
 
   		while($data = $req->fetch(PDO::FETCH_ASSOC)){

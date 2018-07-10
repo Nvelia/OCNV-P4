@@ -334,7 +334,7 @@ header p{
 	height:370px;
 }
 
-.comment{
+.comment, .comComment{
     position:relative;
     border:solid 1px #999;
     margin:20px;
@@ -342,7 +342,11 @@ header p{
     overflow:hidden;
 }
 
-.comment p{
+.comComment{
+    margin-left:60px;
+}
+
+.comment p, .comComment p{
     margin: 10px 20px;
 }
 

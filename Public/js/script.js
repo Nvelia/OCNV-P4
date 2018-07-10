@@ -61,9 +61,10 @@ function deleteCommentary(){
 function deleteComPanel(){
 	var phpCommentaryAuthor = this.value;
 	var phpCommentaryId = this.id;
+	var phpPostId = this.name;
 	c = confirm("Souhaitez vous supprimer ce commentaire écrit par "+phpCommentaryAuthor+"?");
 	if(c){
-		window.location.href = 'index.php?action=panel&page=comments&function=delete&comId='+phpCommentaryId;
+		window.location.href = 'index.php?action=panel&page=comments&function=delete&comId='+phpCommentaryId+'&postId='+phpPostId;
 	}
 }
 

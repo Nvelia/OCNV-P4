@@ -34,11 +34,10 @@ $getPost = $postManager->getPost($_GET['id']);
 								<input type="hidden" id="idCom" name="idCom" value="'.$comment->getId().'" />	
 								<input type="submit" value="Envoyer" name="send" />
 							</form>
-						</div>
-				</div>';
+						</div></div>';
 
 		$getComComments = $commentManager->getComCommentsList($comment->getId());
-		foreach($getComComments as $comComment){
+		foreach(array_reverse($getComComments) as $comComment){
 			echo '	<div class="comComment">
 						<strong>'.$comComment->getAuthor().'</strong><br/>
 						<em>Le '.$comComment->getCommentDate().'</em>
