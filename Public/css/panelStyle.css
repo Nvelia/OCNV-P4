@@ -141,6 +141,7 @@ header p{
     background-color: #444;
     height: 50px;
     text-align:center;
+    overflow:hidden;
 }
 
 .panelMenu li:first-of-type a{
@@ -178,6 +179,7 @@ header p{
 	height:400px;
 	border: 1px solid #444;
 	line-height:25px;
+    overflow:auto;
 }
 
 .blocPanelHome h4{
@@ -505,4 +507,8 @@ header p{
 @keyframes settingsMsg{
     from { top:-50px; }
     to { top:20px; }
+}
+
+@media screen and (max-width:640px){
+
 }

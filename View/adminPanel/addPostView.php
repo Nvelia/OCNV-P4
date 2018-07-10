@@ -6,11 +6,11 @@
 	<form action="" method="post">
 		<p>
 		    <label for="title">Titre du billet: </label>
-		    <input type="input" name="title" />
+		    <input type="input" name="title"/>
 		    <br/>
 		    <label for="content">Message:</label> <br/> 
 		    <br>
-		    <textarea name="content" rows="10" cols="100">
+		    <textarea required name="content" rows="10" cols="100">
 		    </textarea> 
 		    <br>
 		    <input type="submit" name="send" value="Mettre en ligne" />
