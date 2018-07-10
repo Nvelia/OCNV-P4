@@ -12,7 +12,7 @@
 					}
 		}
 		else{
-			echo 'Aucun Billet.'
+			echo 'Aucun Billet.';
 		}
 		?>
 	</div>
