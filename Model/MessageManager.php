@@ -33,7 +33,7 @@ class MessageManager extends Manager {
       $data = $req->fetch(PDO::FETCH_ASSOC);
 
       if($data){
-        return new Message($data);
+          return new Message($data);
       }
     }
 

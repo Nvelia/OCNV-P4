@@ -38,7 +38,10 @@ class PostsManager extends Manager {
     public function getLastPost(){
       $req = $this->db->query('SELECT * FROM posts ORDER BY id DESC LIMIT 1');
       $data = $req->fetch(PDO::FETCH_ASSOC);
-      return new Post($data);
+
+      if($data){
+          return new Post($data);
+      } 
     }
 
     public function getAllPosts(){

@@ -36,7 +36,10 @@ class CommentsManager extends Manager {
     public function getLastComment(){
       $req = $this->db->query('SELECT * FROM comments ORDER BY id DESC LIMIT 1');
       $data = $req->fetch(PDO::FETCH_ASSOC);
-      return new Comment($data);
+
+      if($data){
+          return new Comment($data);
+      } 
     }
 
   	public function getCommentsList($idPost){
