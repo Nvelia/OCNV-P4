@@ -52,6 +52,7 @@ class PostsManager extends Manager {
       while($data = $req->fetch(PDO::FETCH_ASSOC)){
         $postsList[] = new Post($data);
       }
+
       return $postsList;
     }
 
@@ -61,8 +62,9 @@ class PostsManager extends Manager {
   		$req = $this->db->query('SELECT id, title, content, postDate FROM posts ORDER BY id DESC LIMIT '.(($cPage-1)*$perPage).','.$perPage);
 
   		while($data = $req->fetch(PDO::FETCH_ASSOC)){
-  			$postsList[] = new Post($data);
+  			  $postsList[] = new Post($data);
   		}
+      
   		return $postsList;
   	}
   	

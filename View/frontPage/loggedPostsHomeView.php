@@ -35,9 +35,11 @@ foreach($getPosts as $post){
  	}
 }
 
-echo '<div class="page"><a href="?action=home&amp;p='.($cPage -1).'">&laquo;</a>';
-echo 'Page '. $cPage . ' sur '.$nbPage;
-echo '<a href="?action=home&amp;p='.($cPage +1).'">&raquo;</a></div>';
+if($nbPage > 1){
+	echo '<div class="page"><a href="?action=home&amp;p='.($cPage -1).'">&laquo;</a>';
+	echo 'Page '. $cPage . ' sur '.$nbPage;
+	echo '<a href="?action=home&amp;p='.($cPage +1).'">&raquo;</a></div>';
+}
 
 $pageContent = ob_get_clean();
 require('homeView.php'); ?>

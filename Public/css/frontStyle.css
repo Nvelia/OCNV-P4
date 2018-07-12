@@ -10,6 +10,16 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
+@font-face {
+    font-family: 'Amarillo';
+    src: url('Armarillo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ananda';
+    src: url('AnandaPersonal.ttf') format('truetype');
+}
+
 em{
     font-size:0.8em;
 }
@@ -120,6 +130,17 @@ input[type=input]{
     background-color: #151515;
     width:100%;
     margin-bottom:20px;
+    display:flex;
+    justify-content: space-around;
+    padding-left:20px;
+}
+
+.header p{
+    color: white;
+    margin-top:175px;
+    font-size:2.5vw;
+    font-family: 'Ananda', Arial, serif;
+
 }
 
 /* Login Form 

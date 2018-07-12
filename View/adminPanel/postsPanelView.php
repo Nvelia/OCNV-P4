@@ -28,9 +28,11 @@
 	}
 echo '</table></div>';
 
-echo '<div class="pagePres"><a href="index.php?action=panel&amp;page=posts&amp;p='.($cPage -1).'">&laquo;</a>';
-echo 'Page '. $cPage . ' sur '.$nbPage;
-echo '<a href="index.php?action=panel&amp;page=posts&amp;p='.($cPage +1).'">&raquo;</a></div>';
+if($nbPage > 1){
+	echo '<div class="pagePres"><a href="index.php?action=panel&amp;page=posts&amp;p='.($cPage -1).'">&laquo;</a>';
+	echo 'Page '. $cPage . ' sur '.$nbPage;
+	echo '<a href="index.php?action=panel&amp;page=posts&amp;p='.($cPage +1).'">&raquo;</a></div>';
+}
 
 $pageContent = ob_get_clean();
 require('adminPanelView.php'); ?>

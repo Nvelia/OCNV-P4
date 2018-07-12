@@ -14,8 +14,7 @@
         <nav class="menuBar">
             <ul>
                 <li><a href="?action=home">Accueil</a></li>
-                <li><a href="#">Mes ouvrages</a></li>
-                <li><a href="#">A propos</a></li>
+
             </ul>
             <img src="public/images/jf.png">
             <a href="#" id="login" class="login"> 
@@ -26,7 +25,11 @@
                 </a>
         </nav>
         <div class="header">
-            <img src="public/images/jfheader.jpg" alt="photo_de_l'auteur" />
+            <p>
+                Découvrez le nouveau roman de Jean Forteroche <br />
+                 en version web et numérique !
+            </p>
+            <img src="public/images/head.jpg" alt="photo_de_l'auteur" />
         </div>
 
         <?php require('loginView.php');
