@@ -14,6 +14,7 @@ else{
 	echo 'Vous avez '.$unreadMessage.' messages non lus';
 } ?>
 
+
 <table class="mailTable">
 	<tr>
 		<th></th>

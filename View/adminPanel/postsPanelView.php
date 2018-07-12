@@ -20,7 +20,7 @@
 
 	foreach($getPosts as $post){
 		echo 	'<tr><td>'.$post->getTitle().'</td>
-				<td><a href="index.php?action=home&page=comments&id='.$post->getId().'">'. substr($post->getContent(), 0, 120).'</a></td>
+				<td><a href="index.php?action=home&page=comments&id='.$post->getId().'">'. substr($post->getContent(), 0, 100).'</a></td>
 				<td>'. substr($post->getPostDate(), 0, 10).'</td>
 				<td><a href="?action=panel&amp;function=modify&amp;page=posts&amp;id='.$post->getId().'" class="modifyLink">Modifier</a></td>
 				<td><button type="button" id="'.$post->getId().'" class="delete deletePost">&times;</button></td>
