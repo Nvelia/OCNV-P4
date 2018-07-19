@@ -27,7 +27,7 @@ $getPost = $postManager->getPost($_GET['id']);
 						<div class="formComComment">
 							<form action="" method="post">
 								<label for="nom">Nom: </label>
-								<input type="input" name="author" id="author" />
+								<input type="input" name="author" id="author" required/>
 								<label for="comment">Commentaire: </label><br />
 								<textarea id="comment" name="comment"></textarea>
 								<input type="hidden" id="idCom" name="idCom" value="'.$comment->getId().'" />	
@@ -47,7 +47,7 @@ $getPost = $postManager->getPost($_GET['id']);
 						<div class="formComComment">
 							<form action="" method="post">
 								<label for="nom">Nom: </label>
-								<input type="input" name="author" id="author" />
+								<input type="input" name="author" id="author" required/>
 								<label for="comment">Commentaire: </label><br />
 								<textarea id="comment" name="comment"></textarea>
 								<input type="hidden" id="idCom" name="idCom" value="'.$comment->getId().'" />	
@@ -65,7 +65,7 @@ $getPost = $postManager->getPost($_GET['id']);
 <div id="formComment">
 	<form action="" method="post">
 		<label for="nom">Nom: </label>
-			<input type="input" name="author" id="author" />
+			<input type="input" name="author" id="author" required/>
 		<label for="comment">Commentaire: </label><br />
 			<textarea id="comment" name="comment"></textarea>
 		<input type="submit" value="Envoyer" name="send" />

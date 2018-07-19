@@ -7,7 +7,7 @@
 	<form action="" method="post">
 		<p>
 		    <label for="title">Titre du billet: </label>
-		    <input type="input" name="title" value="<?= $getPost->getTitle(); ?>"/>
+		    <input type="input" name="title" value="<?= $getPost->getTitle(); ?>" required/>
 		    <br/>
 		    <label for="content">Message</label> <br/> 
 		    <br>

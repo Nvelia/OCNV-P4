@@ -6,7 +6,7 @@
 	<form action="" method="post">
 		<p>
 		    <label for="title">Titre du billet: </label>
-		    <input type="input" name="title"/>
+		    <input type="input" name="title" required/>
 		    <br/>
 		    <label for="content">Message:</label> <br/> 
 		    <br>

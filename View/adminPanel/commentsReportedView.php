@@ -1,6 +1,6 @@
 <?php ob_start(); 
 
-echo '<a href="javascript:history.go(-1)" class="previousPage">&laquo; Retourner sur la page des commentaires</a>
+echo '<a href="index.php?action=panel&amp;page=comments" class="previousPage">&laquo; Retourner sur la page des commentaires</a>
 		<div class="commentsReported"><h4>Commentaires signalés</h4>'; ?>
 
 <div class="commentListReported">

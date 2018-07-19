@@ -6,8 +6,8 @@ class MembersManager extends Manager{
 
 	public function add(Member $member){
 		$req = $this->db->prepare('INSERT INTO members(name, password) VALUES(:name, :password)');
-		$req->bindValue(':name', $member->getName());
-		$req->bindValue(':password', $member->getPassword());		  	
+		$req->bindValue(':name', $member->getName(), PDO::PARAM_STR);
+		$req->bindValue(':password', $member->getPassword(), PDO::PARAM_STR);		  	
 		$req->execute();
 
 		$member->hydrate([
