@@ -27,7 +27,7 @@
 					Billet: '.$lastPostComment->getTitle().'<br/>
 					Contenu:<br/>'.substr($lastComment->getContent(), 0, 250).'<br/>'; 
 					if(strlen($lastComment->getContent()) >= 250){ 
-						echo '<br/><a href="index.php?action=home&amp;page=comments&amp;id='.$lastPost->getId().'" class="readMore">Lire la suite...</a>'; 
+						echo '<br/><a href="index.php?action=panel&amp;page=comments" class="readMore">Voir les commentaires...</a>'; 
 					}
 		}
 		else{
@@ -43,7 +43,10 @@
 		if(!empty($lastMessage)){
 			echo 	'Expediteur: '. $lastMessage->getSender().'<br/>
 					Sujet: '.$lastMessage->getTopic().'<br/>
-					Message: '.$lastMessage->getMessage();
+					Message: '.substr($lastMessage->getMessage(),0,350).'<br/>';
+					if(strlen($lastMessage->getMessage()) >= 350){
+						echo '<br/><a href="index.php?action=panel&amp;page=mailbox&amp;function=message&amp;id='.$lastMessage->getId().'" class="readMore">Lire la suite...</a>';
+					}
 		}
 		else{
 			echo 'Aucun message.';

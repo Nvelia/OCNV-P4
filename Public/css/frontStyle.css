@@ -92,79 +92,8 @@ input[type=input]{
     margin-bottom: 8px;
 }
 
-/* Vertical Top Menu 
--------------------------------------------------------------- */
-.menuBar{
-    display:flex;
-    justify-content: space-between;
-}
-.menuBar ul{
-    list-style: none;
-    display:flex;
-}
-
-.menuBar a{
-    display: block;
-    padding: 0 25px;
-    font-size: 1.2em;
-    line-height: 50px;
-    border-right: 1px solid #888;
-    border-bottom: 1px solid #888;
-    background-color: #444;
-    height: 50px;
-}
-
-.menuBar a:hover {
-  background-color: #E7E7E7;
-  color:#151515;
-  transition: .3s background-color;
-  border:none;
-}
-
-.menuBar img{
-    height:50px;
-}
-
-.header{
-    height:500px;
-    background-color: #151515;
-    width:100%;
-    margin-bottom:20px;
-    display:flex;
-    justify-content: space-around;
-    padding-left:20px;
-}
-
-.header p{
-    color: white;
-    margin-top:150px;
-    font-size:2.5vw;
-    font-family: 'Ananda', Arial, serif;
-
-}
-
 /* Login Form 
 -------------------------------------------------------------- */
-#loginWindow{
-    border:1px solid #151515;
-    width:300px;
-    padding:10px;
-    background:#E7E7E7;
-    position:absolute;
-    top:52px;
-    right:0;
-    display:none;
-}
-
-#loginWindow.special:after{
-    content:"";
-    border-left: solid transparent 12px;
-    border-right: solid transparent 12px;
-    border-bottom: solid black 12px;
-    position:absolute;
-    bottom:101%; right:55px;
-}
-
 #loginWindow input[type=checkbox]{
     position:relative;
     top:2px;
@@ -198,16 +127,10 @@ input[type=input]{
     right: 0px;
 }
 
-#loginWindow a{
-    background-color: #444;
-    padding: 5px 10px;
-    margin-bottom:5px;
-    display: inline-block;
-}
-
 #loginWindow a:hover{
     background:#888;
 }
+
 
 /* Add Post Button
 --------------------------------------------------------------------- */
@@ -234,20 +157,6 @@ input[type=input]{
 
 /* Display Post
 --------------------------------------------------------------------- */
-.stylePost{
-    position:relative;
-    border-left: solid 7px #151515;
-    margin:50px 10%;
-    padding: 15px 20px;
-    background:#D1D1D1;
-    text-align:left;
-    overflow:hidden;
-}
-
-.stylePost h3{
-    font-size:1.5em;
-    margin-bottom:40px;
-}
 
 .stylePost p{
     margin-bottom:20px;
@@ -259,13 +168,6 @@ input[type=input]{
     top:15px;
     background:#444;
     border-radius: 5px 0 0 5px;
-}
-
-.stylePost .com{
-    position:absolute;
-    bottom:15px;
-    right: 10px;
-    color:#151515;
 }
 
 .stylePost .com:visited{
@@ -325,9 +227,6 @@ input[type=input]{
 
 /* Display Comments
 --------------------------------------------------------------------- */
-.commentList{
-    margin:50px 10%;
-}
 
 .commentList h3{
     margin-bottom:25px;
@@ -435,10 +334,6 @@ input[type=input]{
 
 /* Add Message
 --------------------------------------------------------------------- */
-.addMessage{
-    margin: 50px 10%;
-}
-
 .formMessage legend{
     font-weight: bold;
 }
@@ -469,4 +364,259 @@ input[type=input]{
 @keyframes settingsMsg{
     from { top:-50px; }
     to { top:20px; }
+}
+
+@media screen and (max-width: 600px){
+	body{
+		padding-bottom:40px;
+	}
+	/* Vertical Top Menu 
+	-------------------------------------------------------------- */
+	.menuBar a{
+	    display: block;
+	    padding: 0 25px;
+	    font-size: 1.2em;
+	    line-height: 50px;
+	    border-bottom: 1px solid #888;
+	    background-color: #444;
+	    height: 50px;
+	    text-align: center
+	}
+
+	.menuBar a:first-of-type{
+		position:relative;
+		top:50px;
+		margin-top:10px;
+	}
+
+	.menuBar a:hover {
+	  background-color: #E7E7E7;
+	  color:#151515;
+	  transition: .3s background-color;
+	  border:none;
+	}
+
+	.menuBar img{
+	    height:50px;
+	    position:relative;
+	    bottom:55px;
+	    display:block;
+	    margin:auto;
+	    width:80%;
+	}
+
+	.header{
+	    height:200px;
+	    background-color: #151515;
+	    margin-bottom:20px;
+	    display:flex;
+	    justify-content: space-around;
+	    padding-left:20px;
+	}
+
+	.header img{
+		display:none;
+	}
+
+	.header p{
+	    color: white;
+	    margin-top:50px;
+	    font-size:1.2em;
+	    font-family: 'Ananda', Arial, serif;
+	}
+
+	/* Login Form 
+	-------------------------------------------------------------- */
+	#loginWindow{
+	    border:1px inset #151515;
+	    padding:10px;
+	    background:#E7E7E7;
+	    position:relative;
+	    display:none;
+	}
+
+	#loginWindow.special:after{
+	    content:"";
+	    border-left: solid transparent 12px;
+	    border-right: solid transparent 12px;
+	    border-bottom: solid black 12px;
+	    position:absolute;
+	    bottom:101%; right:47%;
+	}
+
+	#loginWindow a{
+	    display: block;
+	    padding: 0 25px;
+	    line-height: 40px;
+	    background-color: #444;
+	    height: 40px;
+	    text-align: center
+	}
+
+	#loginWindow a:first-of-type{
+		margin-bottom:-10px;
+	}
+
+	/* Display Post
+	--------------------------------------------------------------------- */
+	.stylePost{
+	    position:relative;
+	    border-left: solid 7px #151515;
+	    margin:50px 10px;
+	    padding: 15px 20px;
+	    background:#D1D1D1;
+	    text-align:left;
+	    overflow:hidden;
+	}
+
+	.stylePost h3{
+	    font-size:1.3em;
+	    margin-bottom:40px;
+	}
+
+	.stylePost .com{
+	    color:#151515;
+	}
+
+	strong + em{
+		margin-bottom:20px;
+		display:inline-block;
+	}
+
+	/* Display Comments
+	--------------------------------------------------------------------- */
+	.commentList{
+	    margin:50px 10px;
+	}
+
+	/* Add Message
+	--------------------------------------------------------------------- */
+	.addMessage{
+	    margin: 50px 10px;
+	}
+
+}
+
+@media screen and (min-width:600px){
+	/* Vertical Top Menu 
+	-------------------------------------------------------------- */
+	.menuBar{
+	    display:flex;
+	    justify-content: space-between;
+	}
+	.menuBar ul{
+	    list-style: none;
+	    display:flex;
+	}
+
+	.menuBar a{
+	    display: block;
+	    padding: 0 25px;
+	    font-size: 1.2em;
+	    line-height: 50px;
+	    border-right: 1px solid #888;
+	    border-bottom: 1px solid #888;
+	    background-color: #444;
+	    height: 50px;
+	}
+
+	.menuBar a:hover {
+	  background-color: #E7E7E7;
+	  color:#151515;
+	  transition: .3s background-color;
+	  border:none;
+	}
+
+	.menuBar img{
+	    height:50px;
+	}
+
+	.header{
+	    height:500px;
+	    background-color: #151515;
+	    width:100%;
+	    margin-bottom:20px;
+	    display:flex;
+	    justify-content: space-around;
+	    padding-left:20px;
+	}
+
+	.header p{
+	    color: white;
+	    margin-top:150px;
+	    font-size:2.5vw;
+	    font-family: 'Ananda', Arial, serif;
+
+	}
+
+	/* Display Post
+	--------------------------------------------------------------------- */
+	.stylePost{
+	    position:relative;
+	    border-left: solid 7px #151515;
+	    margin:50px 10%;
+	    padding: 15px 20px;
+	    background:#D1D1D1;
+	    text-align:left;
+	    overflow:hidden;
+	}
+
+	.stylePost h3{
+	    font-size:1.5em;
+	    margin-bottom:40px;
+	}
+
+	.stylePost .com{
+	    position:absolute;
+	    bottom:15px;
+	    right: 10px;
+	    color:#151515;
+	}
+
+	/* Login Form 
+	-------------------------------------------------------------- */
+	#loginWindow{
+	    border:1px solid #151515;
+	    width:300px;
+	    padding:10px;
+	    background:#E7E7E7;
+	    position:absolute;
+	    top:52px;
+	    right:0;
+	    display:none;
+	}
+
+	#loginWindow.special:after{
+	    content:"";
+	    border-left: solid transparent 12px;
+	    border-right: solid transparent 12px;
+	    border-bottom: solid black 12px;
+	    position:absolute;
+	    bottom:101%; right:55px;
+	}
+
+	#loginWindow a{
+	    display: block;
+	    padding: 0 25px;
+	    line-height: 40px;
+	    background-color: #444;
+	    height: 40px;
+	    text-align: center
+	}
+
+	#loginWindow a:first-of-type{
+		margin-bottom:-10px;
+	}
+
+	/* Display Comments
+	--------------------------------------------------------------------- */
+	.commentList{
+	    margin:50px 10%;
+	}
+
+	/* Add Message
+	--------------------------------------------------------------------- */
+	.addMessage{
+	    margin: 50px 10%;
+	}
 }

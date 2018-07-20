@@ -4,6 +4,7 @@
         <title>Jean Forteroche website</title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="public/css/frontStyle.css" rel="stylesheet" />
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <script src="public/js/tinymce/js/tinymce/tinymce.min.js?apiKey=k0j2dfi7hv1ko2ru0gzvryyfmxzjh364amlg2e5ahmmm3wok"></script>
@@ -12,18 +13,16 @@
         
     <body>
         <nav class="menuBar">
-            <ul>
-                <li><a href="?action=home">Accueil</a></li>
-
-            </ul>
+            <a href="?action=home">Accueil</a>
             <img src="public/images/jf.png">
             <a href="#" id="login" class="login"> 
                 <?php if(isset($_SESSION['nickname'])){ 
                     echo "<i class=\"fas fa-arrow-circle-right\"></i> Bonjour " . $_SESSION['nickname'];
                 } else{?>
                     Connexion <?php } ?> 
-                </a>
+                </a>   
         </nav>
+        <?php require('loginView.php'); ?>
         <div class="header">
             <p>
                 Découvrez le nouveau roman de Jean Forteroche <br />
@@ -32,8 +31,8 @@
             <img src="public/images/head.jpg" alt="photo_de_l'auteur" />
         </div>
 
-        <?php require('loginView.php');
-        echo $pageContent; ?>
+        
+        <?php echo $pageContent; ?>
         <!-- <?= $content ?> -->
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>

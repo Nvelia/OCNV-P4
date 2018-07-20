@@ -170,7 +170,7 @@ function deleteMail(){
 	$id = $_GET['id'];
 	$messageManager->deleteMessage($id);
 	echo "<span class=\"settingsMsg short\"><i class=\"fas fa-exclamation-triangle\"></i> Vous avez supprimé un Email.</span>";
-	require('view/adminPanel/mailboxView.php');
+	mailbox(1,5);
 }
 
 function settingsPage(){

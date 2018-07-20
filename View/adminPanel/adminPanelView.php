@@ -43,7 +43,6 @@
             </section>
         </div>
 
-        <!-- <?= $content ?> -->
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.12.3.js"   integrity="sha256-1XMpEtA4eKXNNpXcJ1pmMPs8JV+nwLdEqwiJeCQEkyc="   crossorigin="anonymous"></script>
         <script type="text/javascript" src="public/js/script.js"></script>
